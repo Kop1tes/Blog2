@@ -1,5 +1,6 @@
 # Blog
 
+npm run dev
 Forest
 
 The forest is a diverse ecosystem teeming with life. Towering trees create a canopy overhead, providing shade and shelter for countless creatures. Sunlight filters through the leaves, dappling the forest floor with patches of light. Birds chirp melodiously, adding to the symphony of natural sounds. Exploring the depths of the forest reveals its hidden wonders and the intricate balance of nature.
