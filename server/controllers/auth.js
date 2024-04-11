@@ -90,16 +90,16 @@ export const getMe = async (req, res) => {
 
         if (!user) {
             return res.json({
-                message: 'Такого пользователя не существует!'
+                message: 'Такого юзера не существует.',
             })
         }
 
         const token = jwt.sign(
             {
-            id: user._id,
+                id: user._id,
             },
             process.env.JWT_SECRET,
-            {expiresIn: '30d'},
+            { expiresIn: '30d' },
         )
 
         res.json({
@@ -107,8 +107,6 @@ export const getMe = async (req, res) => {
             token,
         })
     } catch (error) {
-        res.json({
-            message:'Нет доступа!'
-        })
+        res.json({ message: 'Нет доступа.' })
     }
 }

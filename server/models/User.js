@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose'
 
 const UserSchema = new mongoose.Schema(
     {
@@ -9,14 +9,16 @@ const UserSchema = new mongoose.Schema(
         },
         password: {
             type: String,
-            require: true,
+            required: true,
         },
-        posts: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'Post',
-        },
+        posts: [
+            {
+                type: mongoose.Schema.Types.ObjectId,
+                ref: 'Post',
+            },
+        ],
     },
-    {timestamps: true},
+    { timestamps: true },
 )
 
 export default mongoose.model('User', UserSchema)
